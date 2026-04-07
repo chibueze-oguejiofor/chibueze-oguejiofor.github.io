@@ -1,29 +1,47 @@
-// Inline timeline used in bio page
-.timeline .timeline-item {
+// Bio page academic timeline
+.bio-timeline {
+  list-style: none;
+  padding: 0;
   position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  background: #eee;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 30px 0;
   &:before {
     content: '';
     position: absolute;
     top: 0;
-    left: -8px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #666;
+    left: 16px;
+    width: 2px;
+    height: 100%;
+    background: #ddd;
   }
-  p {
-    margin: 0;
-    line-height: 1.5;
-  }
-  b {
-    font-weight: bold;
-    display: block;
+  .bio-timeline-item {
+    position: relative;
+    padding: 20px 24px;
+    margin-left: 40px;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: -33px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $gray-600;
+      border: 2px solid #fff;
+    }
+    p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    b {
+      font-weight: 600;
+    }
+    em {
+      color: $gray-700;
+    }
   }
 }
 
