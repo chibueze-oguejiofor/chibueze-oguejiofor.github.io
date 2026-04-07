@@ -1,3 +1,32 @@
+// Inline timeline used in bio page
+.timeline .timeline-item {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #666;
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  b {
+    font-weight: bold;
+    display: block;
+  }
+}
+
 // Styling for the timeline section
 .timeline {
   position: relative;
