@@ -1,5 +1,5 @@
 // Styling for the portfolio section
-#portfolio {
+.page-section {
   .portfolio-item {
     right: 0;
     margin: 0 0 15px;
@@ -52,7 +52,6 @@
       }
       p {
         font-size: 16px;
-        font-style: italic;
         margin: 0;
         @include serif-font;
       }
@@ -63,7 +62,7 @@
   }
 }
 @media(min-width:767px) {
-  #portfolio {
+  .page-section {
     .portfolio-item {
       margin: 0 0 30px;
     }
@@ -87,7 +86,6 @@
     }
     p.item-intro {
       font-size: 16px;
-      font-style: italic;
       margin: 20px 0 30px;
       @include serif-font;
     }
