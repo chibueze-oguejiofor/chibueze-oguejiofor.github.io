@@ -76,6 +76,14 @@ img::-moz-selection {
   padding-top: 130px;
 }
 
+ul.pub-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+ul.pub-list > li {
+  margin-bottom: 30px;
+}
+
 .btn {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
@@ -346,6 +354,10 @@ header.masthead .intro-text .intro-heading {
   background-color: #212529;
 }
 
+.bio-timeline-heading {
+  margin-top: 60px;
+}
+
 .bio-timeline {
   list-style: none;
   padding: 0;
@@ -356,7 +368,8 @@ header.masthead .intro-text .intro-heading {
   content: "";
   position: absolute;
   top: 0;
-  left: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 2px;
   height: 100%;
   background: #ddd;
@@ -364,8 +377,7 @@ header.masthead .intro-text .intro-heading {
 .bio-timeline .bio-timeline-item {
   position: relative;
   padding: 20px 24px;
-  margin-left: 40px;
-  margin-bottom: 16px;
+  margin-bottom: 48px;
   background: #f5f5f5;
   border: 1px solid #e8e8e8;
   border-radius: 6px;
@@ -373,13 +385,17 @@ header.masthead .intro-text .intro-heading {
 .bio-timeline .bio-timeline-item:before {
   content: "";
   position: absolute;
-  top: 24px;
-  left: -33px;
-  width: 10px;
-  height: 10px;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #868e96;
   border: 2px solid #fff;
+  z-index: 1;
+}
+.bio-timeline .bio-timeline-item:last-child {
+  margin-bottom: 0;
 }
 .bio-timeline .bio-timeline-item p {
   margin: 0;
