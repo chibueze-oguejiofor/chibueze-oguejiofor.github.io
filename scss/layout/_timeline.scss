@@ -1,4 +1,9 @@
-// Bio page academic timeline
+// Spacing before the timeline heading
+.bio-timeline-heading {
+  margin-top: 60px;
+}
+
+// Bio page academic timeline — vertical line centered on boxes
 .bio-timeline {
   list-style: none;
   padding: 0;
@@ -8,7 +13,8 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 2px;
     height: 100%;
     background: #ddd;
@@ -16,21 +22,24 @@
   .bio-timeline-item {
     position: relative;
     padding: 20px 24px;
-    margin-left: 40px;
-    margin-bottom: 16px;
+    margin-bottom: 48px;
     background: #f5f5f5;
     border: 1px solid #e8e8e8;
     border-radius: 6px;
     &:before {
       content: '';
       position: absolute;
-      top: 24px;
-      left: -33px;
-      width: 10px;
-      height: 10px;
+      top: -6px;
+      left: -6px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: $gray-600;
       border: 2px solid #fff;
+      z-index: 1;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
     p {
       margin: 0;
