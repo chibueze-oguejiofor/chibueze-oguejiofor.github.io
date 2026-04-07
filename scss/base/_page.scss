@@ -1,6 +1,7 @@
 // Global styling for this template
 body {
   overflow-x: hidden;
+  font-size: 17px;
   @include body-font;
 }
 
@@ -25,21 +26,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
   @include heading-font;
 }
 
 .page-section {
   padding: 100px 0;
   h2.section-heading {
-    font-size: 40px;
+    font-size: 36px;
     margin-top: 0;
     margin-bottom: 15px;
   }
   h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
-    font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
     @include serif-font;
@@ -68,4 +68,12 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.bg-offwhite {
+  background-color: #ffffff !important;
+}
+
+.page-section:first-of-type {
+  padding-top: 130px;
 }
