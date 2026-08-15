@@ -1,0 +1,234 @@
+// Dark/light theme + site search overlay
+// The `dark-mode` class is set on <html> by an inline boot script in each
+// page's <head> (localStorage 'theme', falling back to prefers-color-scheme)
+// and toggled by #theme-toggle in js/agency.js.
+
+// ---------------------------------------------------------------------------
+// Search overlay (light mode)
+// ---------------------------------------------------------------------------
+body.search-open {
+  overflow: hidden;
+}
+
+.site-search-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: rgba(33, 37, 41, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  &.active {
+    display: block;
+  }
+  .site-search-box {
+    max-width: 640px;
+    margin: 12vh auto 0;
+    padding: 0 15px;
+  }
+  .site-search-input-wrap {
+    position: relative;
+  }
+  input.site-search-input {
+    width: 100%;
+    font-size: 18px;
+    padding: 14px 48px 14px 18px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background: #fff;
+    color: #212529;
+    outline: none;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  .site-search-close {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    color: $gray-600;
+    padding: 8px 12px;
+    cursor: pointer;
+    &:hover {
+      color: #212529;
+    }
+  }
+  ul.site-search-results {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    max-height: 55vh;
+    overflow-y: auto;
+    border-radius: 6px;
+    li a {
+      display: block;
+      padding: 12px 18px;
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      color: #212529;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        background: #f5f5f5;
+        color: #212529;
+      }
+    }
+    li:last-child a {
+      border-bottom: 0;
+    }
+    .site-search-page {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $gray-600;
+      margin-bottom: 2px;
+    }
+    .site-search-title {
+      display: block;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .site-search-snippet {
+      display: block;
+      font-size: 13px;
+      line-height: 1.5;
+      color: $gray-700;
+      mark {
+        background: rgba($primary, 0.5);
+        color: inherit;
+        padding: 0 1px;
+      }
+    }
+    li.site-search-empty {
+      padding: 12px 18px;
+      background: #fff;
+      border-radius: 6px;
+      color: $gray-600;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Dark mode overrides
+// ---------------------------------------------------------------------------
+html.dark-mode {
+  color-scheme: dark;
+
+  body {
+    background-color: #1a1d21;
+    color: #e9ecef;
+  }
+
+  .text-muted {
+    color: #adb5bd !important;
+  }
+
+  .bg-offwhite {
+    background-color: #1a1d21 !important;
+  }
+
+  // Bio timeline boxes
+  .bio-timeline {
+    &:before {
+      background: #3a3f44;
+    }
+    .bio-timeline-item {
+      background: #2a2e33;
+      border-color: #3a3f44;
+      &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+      }
+      &:before {
+        border-color: #1a1d21;
+      }
+      em {
+        color: #ced4da;
+      }
+    }
+  }
+
+  // Publications section boxes
+  ul.pub-list > li {
+    background: #2a2e33;
+    border-color: #3a3f44;
+  }
+
+  // Portfolio grids (research / satellite products)
+  .portfolio-caption {
+    background-color: #2a2e33 !important;
+  }
+
+  // Bootstrap modals (portfolio pop-ups)
+  .modal-content {
+    background-color: #22262b;
+    color: #e9ecef;
+  }
+  .close-modal {
+    .lr,
+    .lr .rl {
+      background-color: #e9ecef;
+    }
+  }
+
+  // Social buttons (contact page + footer)
+  ul.social-buttons li a {
+    background-color: #2a2e33;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  // Search overlay
+  .site-search-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    input.site-search-input {
+      background: #2a2e33;
+      border-color: #3a3f44;
+      color: #e9ecef;
+      &:focus {
+        border-color: $primary;
+      }
+    }
+    .site-search-close {
+      color: #adb5bd;
+      &:hover {
+        color: #e9ecef;
+      }
+    }
+    ul.site-search-results {
+      li a {
+        background: #2a2e33;
+        border-bottom-color: #3a3f44;
+        color: #e9ecef;
+        &:hover,
+        &:focus {
+          background: #343a40;
+          color: #e9ecef;
+        }
+      }
+      .site-search-page {
+        color: #adb5bd;
+      }
+      .site-search-snippet {
+        color: #ced4da;
+      }
+      li.site-search-empty {
+        background: #2a2e33;
+        color: #adb5bd;
+      }
+    }
+  }
+}

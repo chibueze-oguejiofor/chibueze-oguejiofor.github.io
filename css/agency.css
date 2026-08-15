@@ -77,11 +77,15 @@ img::-moz-selection {
 }
 
 ul.pub-list {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 ul.pub-list > li {
+  padding: 20px 24px;
   margin-bottom: 30px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
 }
 
 .btn {
@@ -356,6 +360,7 @@ header.masthead .intro-text .intro-heading {
 
 .bio-timeline-heading {
   margin-top: 60px;
+  text-transform: uppercase;
 }
 
 .bio-timeline {
@@ -381,6 +386,11 @@ header.masthead .intro-text .intro-heading {
   background: #f5f5f5;
   border: 1px solid #e8e8e8;
   border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.bio-timeline .bio-timeline-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 .bio-timeline .bio-timeline-item:before {
   content: "";
@@ -678,6 +688,205 @@ ul.social-buttons li a {
 }
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
+}
+
+body.search-open {
+  overflow: hidden;
+}
+
+.site-search-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: rgba(33, 37, 41, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.site-search-overlay.active {
+  display: block;
+}
+.site-search-overlay .site-search-box {
+  max-width: 640px;
+  margin: 12vh auto 0;
+  padding: 0 15px;
+}
+.site-search-overlay .site-search-input-wrap {
+  position: relative;
+}
+.site-search-overlay input.site-search-input {
+  width: 100%;
+  font-size: 18px;
+  padding: 14px 48px 14px 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #212529;
+  outline: none;
+}
+.site-search-overlay input.site-search-input:focus {
+  border-color: #fed136;
+}
+.site-search-overlay .site-search-close {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  color: #868e96;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.site-search-overlay .site-search-close:hover {
+  color: #212529;
+}
+.site-search-overlay ul.site-search-results {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  max-height: 55vh;
+  overflow-y: auto;
+  border-radius: 6px;
+}
+.site-search-overlay ul.site-search-results li a {
+  display: block;
+  padding: 12px 18px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  color: #212529;
+  text-decoration: none;
+}
+.site-search-overlay ul.site-search-results li a:hover, .site-search-overlay ul.site-search-results li a:focus {
+  background: #f5f5f5;
+  color: #212529;
+}
+.site-search-overlay ul.site-search-results li:last-child a {
+  border-bottom: 0;
+}
+.site-search-overlay ul.site-search-results .site-search-page {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #868e96;
+  margin-bottom: 2px;
+}
+.site-search-overlay ul.site-search-results .site-search-title {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.site-search-overlay ul.site-search-results .site-search-snippet {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #495057;
+}
+.site-search-overlay ul.site-search-results .site-search-snippet mark {
+  background: rgba(254, 209, 54, 0.5);
+  color: inherit;
+  padding: 0 1px;
+}
+.site-search-overlay ul.site-search-results li.site-search-empty {
+  padding: 12px 18px;
+  background: #fff;
+  border-radius: 6px;
+  color: #868e96;
+}
+
+html.dark-mode {
+  color-scheme: dark;
+}
+html.dark-mode body {
+  background-color: #1a1d21;
+  color: #e9ecef;
+}
+html.dark-mode .text-muted {
+  color: #adb5bd !important;
+}
+html.dark-mode .bg-offwhite {
+  background-color: #1a1d21 !important;
+}
+html.dark-mode .bio-timeline:before {
+  background: #3a3f44;
+}
+html.dark-mode .bio-timeline .bio-timeline-item {
+  background: #2a2e33;
+  border-color: #3a3f44;
+}
+html.dark-mode .bio-timeline .bio-timeline-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+html.dark-mode .bio-timeline .bio-timeline-item:before {
+  border-color: #1a1d21;
+}
+html.dark-mode .bio-timeline .bio-timeline-item em {
+  color: #ced4da;
+}
+html.dark-mode ul.pub-list > li {
+  background: #2a2e33;
+  border-color: #3a3f44;
+}
+html.dark-mode .portfolio-caption {
+  background-color: #2a2e33 !important;
+}
+html.dark-mode .modal-content {
+  background-color: #22262b;
+  color: #e9ecef;
+}
+html.dark-mode .close-modal .lr,
+html.dark-mode .close-modal .lr .rl {
+  background-color: #e9ecef;
+}
+html.dark-mode ul.social-buttons li a {
+  background-color: #2a2e33;
+}
+html.dark-mode ul.social-buttons li a:active, html.dark-mode ul.social-buttons li a:focus, html.dark-mode ul.social-buttons li a:hover {
+  background-color: #fed136;
+}
+html.dark-mode .site-search-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+html.dark-mode .site-search-overlay input.site-search-input {
+  background: #2a2e33;
+  border-color: #3a3f44;
+  color: #e9ecef;
+}
+html.dark-mode .site-search-overlay input.site-search-input:focus {
+  border-color: #fed136;
+}
+html.dark-mode .site-search-overlay .site-search-close {
+  color: #adb5bd;
+}
+html.dark-mode .site-search-overlay .site-search-close:hover {
+  color: #e9ecef;
+}
+html.dark-mode .site-search-overlay ul.site-search-results li a {
+  background: #2a2e33;
+  border-bottom-color: #3a3f44;
+  color: #e9ecef;
+}
+html.dark-mode .site-search-overlay ul.site-search-results li a:hover, html.dark-mode .site-search-overlay ul.site-search-results li a:focus {
+  background: #343a40;
+  color: #e9ecef;
+}
+html.dark-mode .site-search-overlay ul.site-search-results .site-search-page {
+  color: #adb5bd;
+}
+html.dark-mode .site-search-overlay ul.site-search-results .site-search-snippet {
+  color: #ced4da;
+}
+html.dark-mode .site-search-overlay ul.site-search-results li.site-search-empty {
+  background: #2a2e33;
+  color: #adb5bd;
 }
 
 /*# sourceMappingURL=agency.css.map */

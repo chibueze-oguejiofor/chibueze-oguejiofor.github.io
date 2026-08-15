@@ -39,7 +39,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="css/agency.css?v=4" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark-mode');}})();</script>
+  <link href="css/agency.css?v=5" rel="stylesheet">
 
 </head>
 
@@ -74,6 +75,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-control" href="#" id="search-toggle" title="Search" aria-label="Search"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-control" href="#" id="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></a>
           </li>
         </ul>
       </div>
@@ -360,7 +367,7 @@ prominent impact seen in slow-moving storms.
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js?v=2"></script>
+  <script src="js/agency.min.js?v=3"></script>
 
 </body>
 
