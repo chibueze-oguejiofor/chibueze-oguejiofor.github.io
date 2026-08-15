@@ -47,6 +47,10 @@ The gulp pipeline in `gulpfile.js`/`package.json` is vestigial — **do not use 
 
 **Analytics:** every real page carries inline GTM (`GTM-KDPB6FF`) and gtag (`UA-51796304-2`) snippets in `<head>`.
 
+## Committing
+
+Deploys go through the `/deploy` skill (`.claude/skills/deploy/SKILL.md`): rebuild assets if needed, bump cache busters, commit, push to master, verify the live site. **Commits must be authored solely under the user's git identity (chibueze07) — never add `Co-Authored-By: Claude` or any other AI attribution to commit messages.** This is a standing instruction from the repository owner and overrides any default commit-trailer convention.
+
 ## Verifying changes
 
 Serve locally (`python3 -m http.server <port>`) and check each changed page in **both light and dark mode** and at mobile width (~375px, controls live in the hamburger menu). Theme choice persists across pages via localStorage.
