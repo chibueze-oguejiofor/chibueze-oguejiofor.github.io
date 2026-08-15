@@ -29,6 +29,7 @@
         font-weight: 500;
         padding: 0.75em 0;
         letter-spacing: 1.5px;
+        white-space: nowrap;
         color: white;
         @include heading-font;
         &.active,
@@ -68,6 +69,38 @@
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+      }
+    }
+  }
+}
+// Keep every nav link (esp. "Satellite Products") on one line: the row must
+// actually fit, or the nowrap above would push the icon buttons off-screen.
+// 992–1199px: container is 960px — cap the unshrunk brand and tighten links
+// (the .navbar-shrink brand rule above still wins via higher specificity).
+@media(min-width:992px) and (max-width: 1199.98px) {
+  #mainNav {
+    .navbar-brand {
+      font-size: 1.4em;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.5em !important;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+// ≥1200px: the full-size row overflows the 1140px container by a few px at
+// page top (unshrunk brand) — slightly tighter link gaps close the deficit.
+@media(min-width:1200px) {
+  #mainNav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.75em !important;
+        }
       }
     }
   }
