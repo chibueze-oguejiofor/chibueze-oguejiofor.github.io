@@ -20,7 +20,7 @@ Six root HTML files. `index.html` is a pure meta-refresh redirect to `bio.html` 
 
 ## Build Commands
 
-The gulp pipeline in `gulpfile.js`/`package.json` is vestigial — **do not use it**. The real toolchain is the globally installed `sass` CLI and `terser`:
+There is no npm toolchain (the former gulp pipeline — `package.json`, `package-lock.json`, `gulpfile.js`, `.travis.yml`, `.browserslistrc` — was removed in Aug 2026 to clear Dependabot alerts). The build uses the globally installed `sass` CLI and `terser`:
 
 - `sass scss/agency.scss css/agency.css --load-path=node_modules` — compile CSS (this is what pages link)
 - `sass scss/agency.scss css/agency.min.css --load-path=node_modules --style=compressed --no-source-map` — minified CSS (built but not linked)
