@@ -40,7 +40,7 @@
 
   <!-- Custom styles for this template -->
   <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark-mode');}})();</script>
-  <link href="css/agency.css?v=6" rel="stylesheet">
+  <link href="css/agency.css?v=7" rel="stylesheet">
 
 </head>
 
@@ -74,9 +74,6 @@
             <a class="nav-link" href="satellite-products.html">Satellite Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link nav-control" href="#" id="search-toggle" title="Search" aria-label="Search"><i class="fas fa-search"></i></a>
           </li>
           <li class="nav-item">
@@ -101,59 +98,51 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="portfolio-card">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
               </div>
+              <img class="img-fluid" src="img/portfolio/seamount-thumbnail_new.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Tropical Cyclone Rapid Intensification</h4>
+              <p class="text-muted">Influence of Sea Surface Temperature (SST) length scales</p><a href="https://doi.org/10.1175/JAS-D-22-0158.1" target="_blank">Published - [DOI]</a>
             </div>
-            <img class="img-fluid" src="img/portfolio/seamount-thumbnail_new.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Tropical Cyclone Rapid Intensification</h4>
-            <p class="text-muted">Influence of Sea Surface Temperature (SST) length scales</p><a href="https://doi.org/10.1175/JAS-D-22-0158.1" target="_blank">Published - [DOI]</a>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="portfolio-card">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
               </div>
+              <img class="img-fluid" src="img/portfolio/so-cal.gif" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Turbulence In Hurricanes</h4>
+              <p class="text-muted">The Diffusive Role of Turbulence in Hurricane Momentum Dynamics</p><a href="https://doi.org/10.1175/JAS-D-23-0209.1" target="_blank">Published - [DOI]</a>
             </div>
-            <img class="img-fluid" src="img/portfolio/so-cal.gif" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Turbulence In Hurricanes</h4>
-            <p class="text-muted">The Diffusive Role of Turbulence in Hurricane Momentum Dynamics</p><a href="https://doi.org/10.1175/JAS-D-23-0209.1" target="_blank">Published - [DOI]</a>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
+          <div class="portfolio-card">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
               </div>
+              <img class="img-fluid" src="img/portfolio/MSHARK-thumbnail.gif" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Eddies In The Hurricane Eyewall</h4>
+              <p class="text-muted">The Dynamics of Turbulent Structures in the N-W quadrant of the Eyewall</p><a href="https://doi.org/10.48550/arXiv.2504.00293" target="_blank">arXiv preprint - [DOI]</a>
             </div>
-            <img class="img-fluid" src="img/portfolio/MSHARK-thumbnail.gif" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Eddies In The Hurricane Eyewall</h4>
-            <p class="text-muted">The Dynamics of Turbulent Structures in the N-W quadrant of the Eyewall</p><a href="https://doi.org/10.48550/arXiv.2504.00293" target="_blank">arXiv preprint - [DOI]</a>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/sar.gif" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Synthetic Aperture Radar (SAR)</h4>
-            <p class="text-muted">Inner-core "fingers" in Hurricane Helene, 2024.</p><a href="https://scholar.google.com/citations?hl=en&user=DgbfTCoAAAAJ" target="_blank"> [DOI]</a>
           </div>
         </div>
 
@@ -367,7 +356,7 @@ prominent impact seen in slow-moving storms.
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js?v=3"></script>
+  <script src="js/agency.min.js?v=4"></script>
 
 </body>
 

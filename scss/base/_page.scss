@@ -88,4 +88,83 @@ ul.pub-list {
     border: 1px solid #e8e8e8;
     border-radius: 6px;
   }
+  ul.pub-entries {
+    list-style: none;
+    padding-left: 4px;
+    margin: 0;
+    > li {
+      position: relative;
+      padding: 8px 0 8px 22px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #f5f5f5;
+        border: 2px solid $primary;
+        transition: background 0.2s;
+      }
+      &:hover::before {
+        background: $primary;
+      }
+    }
+  }
+}
+
+// Academic profile pill buttons (bio page)
+.scholar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 8px;
+}
+
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #e2e5ea;
+  background: #ffffff;
+  color: $gray-900;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s, background 0.2s;
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+}
+
+// Outranks the headshot rule `.team-member img { width/height: 225px; border: … }`
+.scholar-links .scholar-link img {
+  width: 16px;
+  height: 16px;
+  border: none;
+  flex-shrink: 0;
+}
+
+.orcid-link:hover {
+  border-color: #a6ce39;
+  color: #5a8a00;
+  background: #f6ffe0;
+}
+
+.gscholar-link:hover {
+  border-color: #4285f4;
+  color: #4285f4;
+  background: #f0f5ff;
+}
+
+.github-link:hover {
+  border-color: #333;
+  color: #333;
+  background: #f5f5f5;
 }

@@ -3,6 +3,15 @@
   .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    .portfolio-card {
+      max-width: 400px;
+      margin: 0 auto;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+    }
     .portfolio-link {
       position: relative;
       display: block;

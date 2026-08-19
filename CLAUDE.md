@@ -8,15 +8,14 @@ Personal portfolio website for Chibueze Nnamdi Oguejiofor, hosted via GitHub Pag
 
 ## Pages
 
-Six root HTML files. `index.html` is a pure meta-refresh redirect to `bio.html` (no navbar, no CSS/JS). The five real pages are:
+Six root HTML files. `index.html` and `contact.html` are pure meta-refresh redirects to `bio.html` (no navbar, no CSS/JS) — the old Contact page was retired in Aug 2026 (its content duplicated the footer); the redirect keeps old links alive. The four real pages are:
 
-- `bio.html` — landing page: headshot, bio prose, academic timeline (`.bio-timeline` boxes), CV link
-- `research.html` — portfolio grid (4 items) + Bootstrap modals
-- `publications.html` — three gray box sections (`ul.pub-list > li`): peer-reviewed, thesis & dissertation, conferences
+- `bio.html` — landing page: headshot, academic-profile pill buttons (`.scholar-links`: ORCID / Google Scholar / GitHub, brand-colored hovers; ORCID icon is self-hosted `img/orcid.svg`), bio prose, academic timeline (`.bio-timeline` boxes), CV link
+- `research.html` — portfolio grid (3 items) + Bootstrap modals
+- `publications.html` — three gray box sections (`ul.pub-list > li`), each holding a `ul.pub-entries` bullet list (one `li` per publication; yellow ring bullets that fill on hover): peer-reviewed, thesis & dissertation, conferences
 - `satellite-products.html` — portfolio grid (3 items) + modals with MP4s
-- `contact.html` — social buttons (no form; `mail/contact_me.php` and `js/contact_me.js` are dead code)
 
-**The navbar is duplicated verbatim in all 5 real pages** (no templating). Any navbar change must be applied in all 5 files. Each page hardcodes `active` on its own nav link (and `js/agency.js` also sets it by filename).
+**The navbar is duplicated verbatim in all 4 real pages** (no templating; links: Bio, Research, Publications, Satellite Products, then the search/theme icon controls). Any navbar change must be applied in all 4 files. Each page hardcodes `active` on its own nav link (and `js/agency.js` also sets it by filename). Contact info lives only in the footer, which is duplicated on all 4 pages.
 
 ## Build Commands
 
@@ -26,14 +25,14 @@ There is no npm toolchain (the former gulp pipeline — `package.json`, `package
 - `sass scss/agency.scss css/agency.min.css --load-path=node_modules --style=compressed --no-source-map` — minified CSS (built but not linked)
 - `terser js/agency.js -o js/agency.min.js --compress --mangle` — minify JS (pages load the **minified** file)
 
-**Cache busters:** pages link `css/agency.css?v=N` and `js/agency.min.js?v=N`. After changing CSS or JS, bump the corresponding `?v=` in **all 5 pages** or GitHub Pages serves stale assets.
+**Cache busters:** pages link `css/agency.css?v=N` and `js/agency.min.js?v=N`. After changing CSS or JS, bump the corresponding `?v=` in **all 4 pages** or GitHub Pages serves stale assets.
 
 ## Architecture
 
 **Styles:** all custom styling lives in `scss/` (no inline `<style>` blocks in the HTML). Entry point `scss/agency.scss` imports:
-- `base/` — `_variables.scss` (Bootstrap grays + `$primary: #fed136`), `_mixins.scss` (all font mixins are the same Inter stack), `_page.scss` (globals, `.bg-offwhite`, `ul.pub-list` gray boxes)
+- `base/` — `_variables.scss` (Bootstrap grays + `$primary: #fed136`), `_mixins.scss` (all font mixins are the same Inter stack), `_page.scss` (globals, `.bg-offwhite`, `ul.pub-list` gray boxes + nested `ul.pub-entries` hover-fill bullets, `.scholar-links`/`.scholar-link` profile pill buttons)
 - `components/` — `_buttons.scss`, `_navbar.scss` (`#mainNav`, dark `$gray-900`), `_theme.scss` (**dark mode + search overlay — imported last so overrides win**)
-- `layout/` — `_masthead.scss` (dead), `_services.scss` (dead), `_portfolio.scss` (grids + modals), `_timeline.scss` (`.bio-timeline` boxes: gray `#f5f5f5` fill, `#e8e8e8` border, 6px radius, uppercase heading, hover `scale(1.02)` + shadow; the upstream `.timeline` block below line ~60 is unused), `_team.scss`, `_contact.scss` (targets `section#contact`, matched by nothing — contact.html deliberately uses `id="contact-section"`), `_footer.scss`
+- `layout/` — `_masthead.scss` (dead), `_services.scss` (dead), `_portfolio.scss` (grids + modals; each tile's link+caption sit in a `.portfolio-card` wrapper carrying the hover `scale(1.02)` + shadow), `_timeline.scss` (`.bio-timeline` boxes: gray `#f5f5f5` fill, `#e8e8e8` border, 6px radius, uppercase heading with 90px top margin, hover `scale(1.02)` + shadow; the upstream `.timeline` block below line ~60 is unused), `_team.scss`, `_contact.scss` (targets `section#contact`, matched by nothing — dead), `_footer.scss`
 
 **Dark mode:** an inline boot script in each page's `<head>` (just before the CSS link) applies `dark-mode` on `<html>` from `localStorage('theme')`, falling back to system `prefers-color-scheme` — this prevents a flash of the wrong theme. The navbar `#theme-toggle` button (moon/sun icon) toggles the class and persists the choice. All dark styles live in one `html.dark-mode` override block in `scss/components/_theme.scss` (palette: page `#1a1d21`, boxes `#2a2e33`, hairlines `#3a3f44`, text `#e9ecef`, muted `#adb5bd`; `$primary` yellow unchanged).
 

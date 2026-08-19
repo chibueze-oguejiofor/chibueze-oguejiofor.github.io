@@ -163,10 +163,38 @@ html.dark-mode {
     background: #2a2e33;
     border-color: #3a3f44;
   }
+  ul.pub-list ul.pub-entries > li::before {
+    background: #2a2e33;
+  }
+
+  // Academic profile pill buttons (bio page)
+  .scholar-link {
+    background: #2a2e33;
+    border-color: #3a3f44;
+    color: #e9ecef;
+  }
+  .orcid-link:hover {
+    border-color: #a6ce39;
+    color: #a6ce39;
+    background: rgba(166, 206, 57, 0.12);
+  }
+  .gscholar-link:hover {
+    border-color: #4285f4;
+    color: #7baaf7;
+    background: rgba(66, 133, 244, 0.12);
+  }
+  .github-link:hover {
+    border-color: #adb5bd;
+    color: #ffffff;
+    background: #3a3f44;
+  }
 
   // Portfolio grids (research / satellite products)
   .portfolio-caption {
     background-color: #2a2e33 !important;
+  }
+  .page-section .portfolio-item .portfolio-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   }
 
   // Bootstrap modals (portfolio pop-ups)

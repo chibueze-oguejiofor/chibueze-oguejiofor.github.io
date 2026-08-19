@@ -30,7 +30,7 @@ If the tree is clean, report that there is nothing to deploy and stop. Otherwise
 
 ## 3. Bump cache busters if built assets changed
 
-If `css/agency.css` was rebuilt, increment the `?v=N` in `css/agency.css?v=N`; if `js/agency.min.js` was rebuilt, increment `js/agency.min.js?v=N`. Each reference appears once in **all five pages**: `bio.html`, `research.html`, `publications.html`, `satellite-products.html`, `contact.html`. Without the bump, GitHub Pages visitors get stale cached assets.
+If `css/agency.css` was rebuilt, increment the `?v=N` in `css/agency.css?v=N`; if `js/agency.min.js` was rebuilt, increment `js/agency.min.js?v=N`. Each reference appears once in **all four pages**: `bio.html`, `research.html`, `publications.html`, `satellite-products.html`. Without the bump, GitHub Pages visitors get stale cached assets.
 
 ## 4. Commit — in the user's name only
 

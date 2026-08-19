@@ -1,6 +1,8 @@
 // Spacing before the timeline heading
-.bio-timeline-heading {
-  margin-top: 60px;
+// Scoped under .team-member to outrank its blanket `p { margin-top: 0 }`
+.bio-timeline-heading,
+.team-member p.bio-timeline-heading {
+  margin-top: 90px;
   text-transform: uppercase;
 }
 

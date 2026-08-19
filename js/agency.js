@@ -49,6 +49,7 @@
   var searchIndex = [
     // Bio
     { page: 'Bio', url: 'bio.html', title: 'Chibueze N. Oguejiofor, Ph.D. — Scientist II, Verisk', text: 'Scientist II Verisk Catastrophe & Risk Solutions United States catastrophe risk modeling industry hurricane dynamics physics parametric risk models' },
+    { page: 'Bio', url: 'bio.html', title: 'Academic profiles — ORCID, Google Scholar, GitHub', text: 'ORCID 0000-0002-4950-7545 Google Scholar citations GitHub chibueze-oguejiofor profile links' },
     { page: 'Bio', url: 'bio.html', title: 'Doctoral research at the University of Notre Dame', text: 'richter lab tropical cyclone rapid intensification air-sea interaction submesoscale turbulent scales storm intensity geostatistical framework sea surface temperature SST anomalies physics of turbulence roll vortices mesovortices streaks updraft-downdraft couplets hurricane eyewalls' },
     { page: 'Bio', url: 'bio.html', title: 'Ph.D. in Civil and Environmental Engineering & Earth Sciences (Fluid Dynamics), 2020 - 2024', text: 'University of Notre Dame United States dissertation On the Internal Processes Modulating Tropical Cyclone Intensity Turbulent Stresses & Submesoscale Dynamics timeline academic journey' },
     { page: 'Bio', url: 'bio.html', title: 'Postgraduate (PGd.) in Earth System Physics, 2019 - 2020', text: 'International Center for Theoretical Physics ICTP Italy thesis Local and Non-Local PBL schemes in WRF model Impact on the Intensification of Tropical cyclone Idai timeline academic journey' },
@@ -59,7 +60,6 @@
     { page: 'Research', url: 'research.html', title: 'Tropical Cyclone Rapid Intensification', text: 'Influence of Sea Surface Temperature SST length scales published multiscale anomalies predictability onset timing' },
     { page: 'Research', url: 'research.html', title: 'Turbulence In Hurricanes', text: 'The Diffusive Role of Turbulence in Hurricane Momentum Dynamics momentum diffusion in intense hurricanes mean wind fields published' },
     { page: 'Research', url: 'research.html', title: 'Eddies In The Hurricane Eyewall', text: 'The Dynamics of Turbulent Structures in the N-W quadrant of the Eyewall arXiv preprint coming soon on-going research' },
-    { page: 'Research', url: 'research.html', title: 'Synthetic Aperture Radar (SAR)', text: 'Inner-core fingers in Hurricane Helene 2024 shallow water equations Fortran90 Python CDO NCL NCO Bash scripting' },
     // Publications — peer-reviewed
     { page: 'Publications', url: 'publications.html', title: 'Near-surface Coherent Structures in an Intense Tropical Cyclone: Conditional Eddies and Vertical Momentum Fluxes (2025)', text: 'Oguejiofor Bryan Sullivan Richter Journal of Fluid Mechanics in preparation arXiv preprint peer-reviewed' },
     { page: 'Publications', url: 'publications.html', title: 'The Role of Turbulence in an Intense Tropical Cyclone: Momentum Diffusion, Eddy Viscosities, and Mixing Lengths (2024)', text: 'Oguejiofor Bryan Rotunno Sullivan Richter Journal of the Atmospheric Sciences peer-reviewed' },
@@ -80,8 +80,8 @@
     { page: 'Satellite Products', url: 'satellite-products.html', title: 'Synthetic Aperture Radar (SAR)', text: 'Monitoring the structural evolution of storms with high resolution 500m SAR imagery Sentinel Radarsat RCM satellite missions Hurricane Humberto 2025 life cycle tropical storm extra tropical transition' },
     { page: 'Satellite Products', url: 'satellite-products.html', title: 'Cloud Profiling Radars & Multispectral Imagers', text: 'Cloud Profiling Radar CPR Multi-Spectral Imager MSI Atmospheric Lidar ATLID Broad-Band Radiometer BBR ESA EARTHCare satellite mission Typhoon Fung-Wong 2025 cross section storm structure Phillipines' },
     { page: 'Satellite Products', url: 'satellite-products.html', title: 'Geostationary Satellite', text: 'Advanced Baseline Imager ABI Geostationary Operational Environmental Satellite GOES SAR data sources Hurricane Melissa 2025 landfall Jamaica' },
-    // Contact
-    { page: 'Contact', url: 'contact.html', title: 'Contact — Connect with me', text: 'email oguejiofor.n.chibueze@gmail.com twitter github linkedin google scholar social' }
+    // Contact (footer on every page)
+    { page: 'Bio', url: 'bio.html', title: 'Contact — Connect with me', text: 'email oguejiofor.n.chibueze@gmail.com twitter github linkedin google scholar social contact' }
   ];
 
   var escapeHtml = function(s) {
