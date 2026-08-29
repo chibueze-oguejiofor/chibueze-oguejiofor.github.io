@@ -3,7 +3,12 @@
 .bio-timeline-heading,
 .team-member p.bio-timeline-heading {
   margin-top: 90px;
+  // Bold, underlined, uppercase Inter at body size (restores the pre-typography-pass look)
+  @include heading-font;
+  font-size: 1em;
+  font-weight: 700;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 // Bio page academic timeline — vertical connector line running through the

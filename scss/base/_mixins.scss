@@ -1,13 +1,31 @@
-// Font Mixins — unified on Inter
+// Font Mixins — two families, mirroring the eric-weinstein.com type system:
+// Source Serif 4 for body/prose/item text, Inter for headings, nav and labels.
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+
 @mixin serif-font {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-@mixin script-font {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-serif;
 }
 @mixin body-font {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-serif;
+}
+@mixin script-font {
+  font-family: $font-sans;
 }
 @mixin heading-font {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: $font-sans;
+}
+// Small tracked uppercase label (the reference site's section-label /
+// attribution treatment). Inner <b> inherits the weight so Bootstrap's
+// `b { font-weight: bolder }` can't push it to an unloaded 700.
+@mixin label-font {
+  @include heading-font;
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  b,
+  strong {
+    font-weight: inherit;
+  }
 }

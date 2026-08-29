@@ -1,9 +1,20 @@
 // Styling for the portfolio section
+// Equal-height tiles: Bootstrap's .row is already flex (columns stretch), so
+// the column becomes a column-flex box, the card fills it, and the caption
+// absorbs the slack so every tile ends on the same line. The link/caption
+// `margin: 0 auto` from the template is reset here — auto cross-axis margins
+// would disable flex stretch and leave a short caption narrower than its card.
 .page-section {
   .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    display: flex;
+    flex-direction: column;
     .portfolio-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      width: 100%;
       max-width: 400px;
       margin: 0 auto;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -15,9 +26,16 @@
     .portfolio-link {
       position: relative;
       display: block;
-      max-width: 400px;
-      margin: 0 auto;
+      width: 100%;
+      max-width: none;
+      margin: 0;
       cursor: pointer;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
       .portfolio-hover {
         position: absolute;
         width: 100%;
@@ -50,25 +68,49 @@
       }
     }
     .portfolio-caption {
-      max-width: 400px;
-      margin: 0 auto;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: none;
+      margin: 0;
       padding: 25px;
       text-align: center;
       background-color: $white;
       h4 {
         margin: 0;
         text-transform: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        @include serif-font;
       }
       p {
-        font-size: 16px;
+        font-size: 0.95rem;
+        font-style: italic;
         margin: 0;
         @include serif-font;
+      }
+      // Trailing DOI link (research page): pin to the caption's bottom edge
+      > a {
+        align-self: center;
+        margin-top: auto;
+        padding-top: 0.35rem;
+        font-size: 0.95rem;
       }
     }
   }
   * {
     z-index: 2;
   }
+}
+// Common thumbnail frame per page (CSS crop only; source files untouched).
+// Research thumbs are all 1200×920-proportioned → no crop; satellite thumbs
+// are near-square (1.03–1.10) → ≤4.5% trimmed per side, centred.
+#research .portfolio-item .portfolio-link img {
+  aspect-ratio: 1200 / 920;
+}
+#satellite-products .portfolio-item .portfolio-link img {
+  aspect-ratio: 1 / 1;
 }
 @media(min-width:767px) {
   .page-section {
@@ -87,14 +129,20 @@
     padding: 100px 0;
     text-align: center;
     h2 {
-      font-size: 3em;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       margin-bottom: 15px;
+      @media (max-width: 575.98px) {
+        font-size: 1.6rem;
+      }
     }
     p {
       margin-bottom: 30px;
     }
     p.item-intro {
-      font-size: 16px;
+      font-size: 1.08rem;
+      font-style: italic;
       margin: 20px 0 30px;
       @include serif-font;
     }

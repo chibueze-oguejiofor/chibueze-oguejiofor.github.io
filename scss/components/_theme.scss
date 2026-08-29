@@ -35,6 +35,7 @@ body.search-open {
   input.site-search-input {
     width: 100%;
     font-size: 18px;
+    @include heading-font;
     padding: 14px 48px 14px 18px;
     border: 1px solid #e8e8e8;
     border-radius: 6px;
@@ -86,6 +87,7 @@ body.search-open {
     }
     .site-search-page {
       display: block;
+      @include heading-font;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -95,6 +97,7 @@ body.search-open {
     }
     .site-search-title {
       display: block;
+      @include serif-font;
       font-weight: 600;
       font-size: 15px;
       line-height: 1.4;
@@ -162,6 +165,9 @@ html.dark-mode {
   }
   ul.pub-list ul.pub-entries > li::before {
     background: #2a2e33;
+  }
+  ul.pub-list > li > p.text-muted {
+    border-bottom-color: #3a3f44;
   }
 
   // Academic profile pill buttons (bio page)

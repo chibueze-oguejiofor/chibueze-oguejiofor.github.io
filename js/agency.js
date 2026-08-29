@@ -48,7 +48,7 @@
   // changes, update the matching entries here (title/text are what's matched).
   var searchIndex = [
     // Bio
-    { page: 'Bio', url: 'bio.html', title: 'Chibueze N. Oguejiofor, Ph.D. — Scientist II, Verisk', text: 'Scientist II Verisk Catastrophe & Risk Solutions United States catastrophe risk modeling industry hurricane dynamics physics parametric risk models' },
+    { page: 'Bio', url: 'bio.html', title: 'Chibueze N. Oguejiofor, Ph.D. — Scientist II, Verisk', text: 'Scientist II Verisk Catastrophe & Risk Solutions United States research scientist modeling understanding submesoscale dynamics hurricanes physics natural catastrophe risk models' },
     { page: 'Bio', url: 'bio.html', title: 'Academic profiles — ORCID, Google Scholar, GitHub', text: 'ORCID 0000-0002-4950-7545 Google Scholar citations GitHub chibueze-oguejiofor profile links' },
     { page: 'Bio', url: 'bio.html', title: 'Doctoral research at the University of Notre Dame', text: 'richter lab tropical cyclone rapid intensification air-sea interaction submesoscale turbulent scales storm intensity geostatistical framework sea surface temperature SST anomalies physics of turbulence roll vortices mesovortices streaks updraft-downdraft couplets hurricane eyewalls' },
     { page: 'Bio', url: 'bio.html', title: 'Ph.D. in Civil and Environmental Engineering & Earth Sciences (Fluid Dynamics), 2020 - 2024', text: 'University of Notre Dame United States dissertation On the Internal Processes Modulating Tropical Cyclone Intensity Turbulent Stresses & Submesoscale Dynamics timeline academic journey' },
