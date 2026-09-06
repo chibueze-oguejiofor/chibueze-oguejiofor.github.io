@@ -140,11 +140,14 @@
     p {
       margin-bottom: 30px;
     }
-    p.item-intro {
+    p.item-intro,
+    p.item-note {
       font-size: 1.08rem;
       font-style: italic;
-      margin: 20px 0 30px;
       @include serif-font;
+    }
+    p.item-intro {
+      margin: 20px 0 30px;
     }
     .modal-abstract {
       text-align: left;
