@@ -496,6 +496,9 @@ header.masthead .intro-text .intro-heading {
   margin: 20px 0 30px;
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
+.portfolio-modal .modal-content .modal-abstract {
+  text-align: left;
+}
 .portfolio-modal .modal-content ul.list-inline {
   margin-top: 0;
   margin-bottom: 30px;

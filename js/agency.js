@@ -57,8 +57,8 @@
     { page: 'Bio', url: 'bio.html', title: 'Bachelors (BSc.) in Geophysics, 2012 - 2017', text: 'University of Lagos Nigeria timeline academic journey' },
     { page: 'Bio', url: 'bio.html', title: 'Curriculum Vitae (CV)', text: 'view complete CV resume pdf' },
     // Research
-    { page: 'Research', url: 'research.html', title: 'Tropical Cyclone Rapid Intensification', text: 'Influence of Sea Surface Temperature SST length scales published multiscale anomalies predictability onset timing' },
-    { page: 'Research', url: 'research.html', title: 'Turbulence In Hurricanes', text: 'The Diffusive Role of Turbulence in Hurricane Momentum Dynamics momentum diffusion in intense hurricanes mean wind fields published' },
+    { page: 'Research', url: 'research.html', title: 'Tropical Cyclone Rapid Intensification', text: 'Influence of Sea Surface Temperature SST length scales published multiscale anomalies predictability onset timing Hurricane Irma cold wakes ocean eddies translation speed convective asymmetries' },
+    { page: 'Research', url: 'research.html', title: 'Turbulence In Hurricanes', text: 'The Diffusive Role of Turbulence in Hurricane Momentum Dynamics momentum diffusion in intense hurricanes mean wind fields published large-eddy simulation category 5 eddy viscosity mixing length Reynolds stresses' },
     { page: 'Research', url: 'research.html', title: 'Eddies In The Hurricane Eyewall', text: 'The Dynamics of Turbulent Structures in the N-W quadrant of the Eyewall arXiv preprint coming soon on-going research' },
     // Publications — peer-reviewed
     { page: 'Publications', url: 'publications.html', title: 'Near-surface Coherent Structures in an Intense Tropical Cyclone: Conditional Eddies and Vertical Momentum Fluxes (2025)', text: 'Oguejiofor Bryan Sullivan Richter Journal of Fluid Mechanics in preparation arXiv preprint peer-reviewed' },
