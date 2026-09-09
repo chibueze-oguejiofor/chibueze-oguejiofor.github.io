@@ -166,6 +166,11 @@ html.dark-mode {
   ul.pub-list ul.pub-entries > li::before {
     background: #2a2e33;
   }
+  // Must out-rank the rest-state rule above: (0,4,5) vs (0,3,5). The light-mode
+  // `li:hover::before` fill is only (0,3,4), so `html.dark-mode` would win the tie.
+  ul.pub-list ul.pub-entries > li:hover::before {
+    background: $primary;
+  }
   ul.pub-list > li > p.text-muted {
     border-bottom-color: #3a3f44;
   }
@@ -197,7 +202,7 @@ html.dark-mode {
     background-color: #2a2e33 !important;
   }
   .page-section .portfolio-item .portfolio-card:hover {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 3px $primary, 0 6px 16px rgba(0, 0, 0, 0.5);
   }
 
   // Bootstrap modals (portfolio pop-ups)
