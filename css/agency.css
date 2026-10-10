@@ -564,11 +564,12 @@ header.masthead .intro-text .intro-heading {
   }
 }
 .bio-timeline .bio-timeline-item {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .bio-timeline .bio-timeline-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #333;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .bio-timeline .bio-timeline-item:before {
   content: "\f19d";
@@ -1023,7 +1024,9 @@ html.dark-mode .bio-timeline .bio-timeline-item {
   border-color: #3a3f44;
 }
 html.dark-mode .bio-timeline .bio-timeline-item:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  border-color: #adb5bd;
+  background: #3a3f44;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 html.dark-mode .bio-timeline .bio-timeline-item em {
   color: #ced4da;

@@ -47,10 +47,13 @@
     @media (max-width: 575.98px) {
       padding: 18px 18px 18px 44px;
     }
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    // Hover is a flat highlight mirroring the GitHub profile pill
+    // (.github-link:hover in base/_page.scss) — no transform, so nothing moves.
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
     &:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border-color: #333;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
     // Degree marker: round gray badge holding the Font Awesome graduation cap
     // (same `fa-graduation-cap` glyph as the Google Scholar profile button),

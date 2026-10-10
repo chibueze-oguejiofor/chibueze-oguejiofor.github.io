@@ -149,8 +149,12 @@ html.dark-mode {
     .bio-timeline-item {
       background: #2a2e33;
       border-color: #3a3f44;
+      // Dark counterpart of the .github-link hover. Must restate border/background:
+      // this rest-state rule out-specifies the light-mode :hover rule in _timeline.scss.
       &:hover {
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+        border-color: #adb5bd;
+        background: #3a3f44;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
       }
       em {
         color: #ced4da;
