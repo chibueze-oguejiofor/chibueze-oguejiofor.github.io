@@ -371,11 +371,13 @@ header.masthead .intro-text .intro-heading {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #e8e8e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .page-section .portfolio-item .portfolio-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 0 2px #fed136, 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  border-color: #333;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 .page-section .portfolio-item .portfolio-link {
   position: relative;
@@ -1067,8 +1069,12 @@ html.dark-mode .github-link:hover {
 html.dark-mode .portfolio-caption {
   background-color: #2a2e33 !important;
 }
+html.dark-mode .page-section .portfolio-item .portfolio-card {
+  border-color: #3a3f44;
+}
 html.dark-mode .page-section .portfolio-item .portfolio-card:hover {
-  box-shadow: 0 0 0 2px #fed136, 0 6px 16px rgba(0, 0, 0, 0.5);
+  border-color: #adb5bd;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 html.dark-mode .modal-content {
   background-color: #22262b;

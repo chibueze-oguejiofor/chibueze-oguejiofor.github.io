@@ -205,8 +205,14 @@ html.dark-mode {
   .portfolio-caption {
     background-color: #2a2e33 !important;
   }
-  .page-section .portfolio-item .portfolio-card:hover {
-    box-shadow: 0 0 0 2px $primary, 0 6px 16px rgba(0, 0, 0, 0.5);
+  // Dark hairline, as on the timeline boxes. The :hover must be restated here:
+  // this rest-state rule (0,4,1) out-specifies the light-mode :hover (0,4,0).
+  .page-section .portfolio-item .portfolio-card {
+    border-color: #3a3f44;
+    &:hover {
+      border-color: #adb5bd;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
   }
 
   // Bootstrap modals (portfolio pop-ups)

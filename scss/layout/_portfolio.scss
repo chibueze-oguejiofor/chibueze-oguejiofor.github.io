@@ -17,10 +17,15 @@
       width: 100%;
       max-width: 400px;
       margin: 0 auto;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      // Hairline frame (same as .bio-timeline-item); hover lifts the tile 4px with
+      // a soft shadow (modeled on profconradi.com's .gallery-item) and darkens the
+      // frame to #333 like the timeline boxes — no scale, no yellow ring.
+      border: 1px solid #e8e8e8;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 0 0 2px $primary, 0 6px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        border-color: #333;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
       }
     }
     .portfolio-link {
