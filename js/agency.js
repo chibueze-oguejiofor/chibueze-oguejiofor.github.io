@@ -67,7 +67,7 @@
     // Publications — thesis & dissertation
     { page: 'Publications', url: 'publications.html', title: 'Doctoral Dissertation (2024): On the Internal Processes Modulating Tropical Cyclone Intensity', text: 'Turbulent Stresses & Submesoscale Dynamics thesis dissertation Notre Dame' },
     { page: 'Publications', url: 'publications.html', title: 'Thesis (2020): Local and Non-Local PBL schemes in WRF model', text: 'planetary boundary layer Impact on the Intensification of Tropical cyclone Idai 2019 thesis ICTP' },
-    { page: 'Publications', url: 'publications.html', title: 'Thesis (2019): Simulating the influence of SST on tropical cyclones over South-West Indian ocean', text: 'sea-surface-temperature UEMS-WRF regional climate model thesis AIMS' },
+    { page: 'Publications', url: 'publications.html', title: 'Thesis (2019): Simulating the influence of SST on tropical cyclones over South-West Indian ocean', text: 'sea surface temperature UEMS-WRF regional climate model thesis AIMS' },
     // Publications — conferences
     { page: 'Publications', url: 'publications.html', title: '36th Conference on Hurricanes and Tropical Meteorology (AMS), 2024 — Long Beach, California', text: 'The diffusive role of turbulence in an intense tropical cyclone conference' },
     { page: 'Publications', url: 'publications.html', title: '23rd Conference on Air-Sea Interaction, 103rd AMS Annual Meeting, 2023 — Denver, Colorado', text: 'Tropical cyclone rapid intensification response to length scales of sea surface temperature anomalies conference' },
