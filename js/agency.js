@@ -61,7 +61,7 @@
     { page: 'Research', url: 'research.html', title: 'Turbulence In Hurricanes', text: 'The Diffusive Role of Turbulence in Hurricane Momentum Dynamics momentum diffusion in intense hurricanes mean wind fields published large-eddy simulation category 5 eddy viscosity mixing length Reynolds stresses' },
     { page: 'Research', url: 'research.html', title: 'Eddies In The Hurricane Eyewall', text: 'The Dynamics of Turbulent Structures in the N-W quadrant of the Eyewall arXiv preprint coming soon on-going research' },
     // Publications — peer-reviewed
-    { page: 'Publications', url: 'publications.html', title: 'Near-surface Coherent Structures in an Intense Tropical Cyclone: Conditional Eddies and Vertical Momentum Fluxes (2025)', text: 'Oguejiofor Bryan Sullivan Richter Journal of Fluid Mechanics in preparation arXiv preprint peer-reviewed' },
+    { page: 'Publications', url: 'publications.html', title: 'Near-surface Coherent Structures in an Intense Tropical Cyclone: Conditional Eddies and Vertical Momentum Fluxes (2025)', text: 'Oguejiofor Richter Journal of Fluid Mechanics in preparation arXiv preprint peer-reviewed' },
     { page: 'Publications', url: 'publications.html', title: 'The Role of Turbulence in an Intense Tropical Cyclone: Momentum Diffusion, Eddy Viscosities, and Mixing Lengths (2024)', text: 'Oguejiofor Bryan Rotunno Sullivan Richter Journal of the Atmospheric Sciences peer-reviewed' },
     { page: 'Publications', url: 'publications.html', title: 'Onset of Tropical Cyclone Rapid Intensification: Evaluating the response to Length Scales of Sea Surface Temperature Anomalies (2023)', text: 'Oguejiofor Wainwright Rudzin Richter Journal of the Atmospheric Sciences peer-reviewed' },
     // Publications — thesis & dissertation
